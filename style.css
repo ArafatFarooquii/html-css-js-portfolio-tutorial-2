@@ -6,11 +6,14 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background: linear-gradient(to bottom, #f9f9f9, #e6ca7c);
+}
+
 
 body {
   font-family: "Poppins", sans-serif;
 }
-
 html {
   scroll-behavior: smooth;
 }
@@ -195,7 +198,10 @@ section {
 }
 
 .title {
+  font-family: 'Roboto', sans-serif;
   font-size: 3rem;
+  color: #333;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -329,28 +335,41 @@ section {
 
 .experience-details-container {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between; /* Space out the two sections */
+  gap: 20px; /* Space between left and right sections */
+}
+
+.details-container {
+  width: 45%; /* Adjust width to ensure both sections fit side-by-side */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.programming-skills {
+  order: 1; /* Place Programming Skills on the left */
+}
+
+.soft-skills {
+  order: 2; /* Place Soft Skills on the right */
 }
 
 .article-container {
   display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+  flex-direction: column; /* Stack articles vertically within each section */
+  gap: 10px; /* Space between articles */
 }
 
-article {
+.article-container article {
   display: flex;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
 }
 
-article .icon {
-  cursor: default;
+.icon {
+  width: 20px;
+  height: 20px;
 }
 
 /* PROJECTS SECTION */
